@@ -1,39 +1,39 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts a fresh node in a linked list,
+ * insert_nodeint_at_index - inserts a new node in a linked list,
  * at a given position
- * @g_h: pointer to the first node in the list
- * @index: index where the fresh node is added
- * @n: data to insert in the fresh node
- * Return: pointer to the fresh node, or NULL
+ * @head: pointer to the first node in the list
+ * @idx: index where the new node is added
+ * @n: data to insert in the new node
+ * Return: pointer to the new node, or NULL
  */
-listint_t *insert_nodeint_at_index(listint_t **g_h, unsigned int index, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 unsigned int i;
-listint_t *fresh;
-listint_t *temp = *g_h;
-fresh = malloc(sizeof(listint_t));
-if (!fresh || !g_h)
+listint_t *new;
+listint_t *temp = *head;
+new = malloc(sizeof(listint_t));
+if (!new || !head)
 return (NULL);
-fresh->n = n;
-fresh->afta = NULL;
-if (index == 0)
+new->n = n;
+new->next = NULL;
+if (idx == 0)
 {
-fresh->afta = *g_h;
-*g_h = fresh;
-return (fresh);
+new->next = *head;
+*head = new;
+return (new);
 }
-for (i = 0; temp && i < index; i++)
+for (i = 0; temp && i < idx; i++)
 {
-if (i == index - 1)
+if (i == idx - 1)
 {
-fresh->afta = temp->afta;
-temp->afta = fresh;
-return (fresh);
+new->next = temp->next;
+temp->next = new;
+return (new);
 }
 else
-temp = temp->afta;
+temp = temp->next;
 }
 return (NULL);
 }
