@@ -1,5 +1,3 @@
-103-find_loop.c
-
 #include "lists.h"
 
 /**
