@@ -2,18 +2,18 @@
 
 /**
  * free_listint2 - frees a linked list
- * @head: pointer to the listint_t list to be freed
+ * @g_h: pointer to the listint_t list to be freed
  */
-void free_listint2(listint_t **head)
+void free_listint2(listint_t **g_h)
 {
-listint_t *temp;
-if (head == NULL)
+listint_t *tmp;
+if (g_h == NULL)
 return;
-while (*head)
+while (*g_h)
 {
-temp = (*head)->next;
-free(*head);
-*head = temp;
+tmp = (*g_h)->next;
+free(*g_h);
+*g_h = tmp;
 }
-*head = NULL;
+*g_h = NULL;
 }
