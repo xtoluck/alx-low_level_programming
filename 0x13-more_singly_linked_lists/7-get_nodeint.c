@@ -12,8 +12,8 @@ unsigned int i = 0;
 listint_t *tmp = head;
 while (tmp && i < index)
 {
-tmp = temp->next;
+tmp = tmp->next;
 i++;
 }
-return (tmp ? temp : NULL);
+return (tmp ? tmp : NULL);
 }
