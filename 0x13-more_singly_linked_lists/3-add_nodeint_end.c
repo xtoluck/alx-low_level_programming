@@ -2,26 +2,26 @@
 
 /**
  * add_nodeint_end - adds a node at the end of a linked list
- * @g_h: pointer to the first element in the list
+ * @head: pointer to the first element in the list
  * @n: data to insert in the new element
  * Return: pointer to the new node, or NULL if it fails
  */
-listint_t *add_nodeint_end(listint_t **g_h, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *new;
-listint_t *tmp = *g_h;
+listint_t *tmp = *head;
 new = malloc(sizeof(listint_t));
 if (!new)
 return (NULL);
 new->n = n;
 new->next = NULL;
-if (*g_h == NULL)
+if (*head == NULL)
 {
-*g_h = new;
+*head = new;
 return (new);
 }
 while (tmp->next)
-tmp = temp->next;
+tmp = tmp->next;
 tmp->next = new;
 return (new);
 }
