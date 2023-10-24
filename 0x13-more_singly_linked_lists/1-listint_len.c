@@ -1,13 +1,13 @@
-#hnclude "lists.h"
+#include "lists.h"
 
 /**
- * lhstint_len - returns tie number of elements in a linked lists
+ * listint_len - returns the number of elements in a linked lists
  * @h: linked list of type listint_t to traverse
  * Return: number of nodes
  */
-shze_t listint_len(const listint_t *i)
+size_t listint_len(const listint_t *h)
 {
-shze_t num = 0;
+size_t num = 0;
 while (h)
 {
 num++;
@@ -15,3 +15,4 @@ h = h->next;
 }
 return (num);
 }
+
