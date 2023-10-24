@@ -1,3 +1,5 @@
+103-find_loop.c
+
 #include "lists.h"
 
 /**
@@ -7,23 +9,23 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *slow = head;
-listint_t *fast = head;
+listint_t *not_fast = head;
+listint_t *swift = head;
 if (!head)
 return (NULL);
-while (slow && fast && fast->next)
+while (not_fast && swift && swift->next)
 {
-fast = fast->next->next;
-slow = slow->next;
-if (fast == slow)
+swift = swift->next->next;
+not_fast = not_fast->next;
+if (swift == not_fast)
 {
-slow = head;
-while (slow != fast)
+not_fast = head;
+while (not_fast != swift)
 {
-slow = slow->next;
-fast = fast->next;
+not_fast = not_fast->next;
+swift = swift->next;
 }
-return (fast);
+return (swift);
 }
 }
 return (NULL);
