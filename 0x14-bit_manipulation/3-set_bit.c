@@ -2,14 +2,14 @@
 
 /**
  * set_bit - sets a bit at a given index to 1
- * @n: pointer to the number to change
- * @index: index of the bit to set to 1
+ * @k: pointer to the number to change
+ * @indx: index of the bit to set to 1
  * Return: 1 for success, -1 for failure
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int set_bit(unsigned long int *k, unsigned int indx)
 {
-if (index > 63)
+if (indx > 63)
 return (-1);
-*n = ((1UL << index) | *n);
+*k = ((1UL << indx) | *k);
 return (1);
 }
