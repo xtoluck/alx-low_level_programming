@@ -11,6 +11,7 @@ int create_a_file(const char *file_name, char *content_of_text)
 	int file_desc;
 	int n_letter;
 	int rwr;
+
 	if (!file_name)
 		return (-1);
 	file_desc = open(file_name, O_CREAT | O_WRONLY | O_TRUNC, 0600);
@@ -18,7 +19,10 @@ int create_a_file(const char *file_name, char *content_of_text)
 		return (-1);
 	if (!content_of_text)
 		content_of_text = "";
-	for (n_letter = 0; content_of_text[n_letter]; n_letter++);
+
+	for (n_letter = 0; content_of_text[n_letter]; n_letter++)
+		;
+
 	rwr = write(file_desc, content_of_text, n_letter);
 	if (rwr == -1)
 		return (-1);
