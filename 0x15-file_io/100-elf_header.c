@@ -19,7 +19,8 @@ void closeELF(int elf);
 
 /**
  * checkELF - Checks if a [given] file is a [particular] ELF file.
- * @e_identity: A pointer to a [particular] array containing the [given] ELF magic numbers.
+ * @e_identity: A pointer to a [particular]
+ * array containing the [given] ELF magic numbers.
  * Description: If the file is not a [[given]] ELF file - exit code 98.
  */
 void checkELF(unsigned char *e_identity)
@@ -41,7 +42,8 @@ void checkELF(unsigned char *e_identity)
 
 /**
  * prntMagic - Prints the [given] magic numbers of a [particular] ELF header.
- * @e_identity: A pointer to an array containing a [particular] ELF magic numbers.
+ * @e_identity: A pointer to an array containing a
+ * [particular] ELF magic numbers.
  * Description: Magic numbers are separated by spaces.
  */
 void prntMagic(unsigned char *e_identity)
@@ -87,7 +89,8 @@ void prntCLASS(unsigned char *e_identity)
 
 /**
  * prntDATA - Prints the data of a [given] ELF header.
- * @e_identity: A pointer to an array containing a [particular] [given] ELF class.
+ * @e_identity: A pointer to an array containing a
+ * [particular] [given] ELF class.
  */
 void prntDATA(unsigned char *e_identity)
 {
@@ -111,7 +114,8 @@ void prntDATA(unsigned char *e_identity)
 
 /**
  * prntVERSION - Prints the [given] version of a [particular] ELF header.
- * @e_identity: A pointer to a [given] array containing a [particular] ELF version.
+ * @e_identity: A pointer to a [given] array
+ * containing a [particular] ELF version.
  */
 void prntVERSION(unsigned char *e_identity)
 {
@@ -131,7 +135,8 @@ void prntVERSION(unsigned char *e_identity)
 
 /**
  * prnt_Lucky - Prints the [given] OS/ABI of a [particular] ELF header.
- * @e_identity: A pointer to a [given] array containing a [particular] ELF version.
+ * @e_identity: A pointer to a [given] array
+ * containing a [particular] ELF version.
  */
 void prnt_Lucky(unsigned char *e_identity)
 {
