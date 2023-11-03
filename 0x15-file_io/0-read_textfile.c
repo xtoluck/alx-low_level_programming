@@ -17,10 +17,10 @@ return (0);
 file_desc = open(file_name, O_RDONLY);
 if (file_desc == -1)
 return (0);
-buf = malloc(sizeof(char) * (letters));
+buf = malloc(sizeof(char) * (printed_letters));
 if (!buf)
 return (0);
-n_r_d = read(file_desc, buf, letters);
+n_r_d = read(file_desc, buf, printed_letters);
 n_w_r = write(STDOUT_FILENO, buf, n_r_d);
 close(file_desc);
 free(buf);
